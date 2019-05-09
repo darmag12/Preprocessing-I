@@ -325,6 +325,9 @@ header nav a:hover {
   text-decoration: none;
   color: azure;
 }
+.container .box5 h2 a:hover {
+  color: greenyellow;
+}
 .container p {
   font-family: 'Gugi', cursive;
   padding: 1.5rem;
