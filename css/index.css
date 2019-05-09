@@ -130,101 +130,239 @@ table {
 * {
   box-sizing: border-box;
 }
-/* variables---*/
-/* mixins---*/
-.borders {
-  border-bottom: 1px dashed grey;
-}
-.paddings {
-  padding: 10px 10px 10px 10px;
-}
-html,
+/* variables and mixins---*/
 body {
-  height: 100%;
+  font-size: 62.5%;
+  background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% 100%;
+  background-attachment: fixed;
+  overflow-y: scroll;
+}
+header h1 {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+  color: gold;
+}
+header nav {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+header nav a {
+  text-decoration: none;
+  margin: 1rem;
+  font-family: 'Akronim', cursive;
+  color: gold;
+  transition: all 0.7s ease-in-out;
+}
+header nav a:hover {
+  border: 0.5rem dotted orangered;
+  font-size: 1.5rem;
 }
 .container {
-  /* border: 1px solid red; */
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: content-box;
-}
-.container #my-name {
+  width: 80rem;
   display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
   justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  margin-right: -70px;
-  margin-bottom: -60px;
-  font-family: 'Bangers', cursive;
-  font-size: 23px;
-  font-weight: bold;
-  padding: 5px 5px 5px 5px;
 }
-.container .logo {
-  width: 90px;
-  margin-right: 0px;
-  margin-left: -80px;
-  padding: 10px 10px 10px 10px;
-}
-.container nav a {
-  display: flex;
-  justify-content: space-evenly;
-  text-decoration: none;
-  padding: 20px 20px 20px 20px;
-  color: black;
-  font-family: 'Chicle', cursive;
+.container .box1 {
+  background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% 100%;
+  background-attachment: fixed;
+  width: 50vh;
+  height: 50vh;
+  margin: 1.2rem;
+  box-sizing: border-box;
+  height: auto;
+  color: azure;
   transition: all 0.7s ease-in-out;
-  -webkit-transition: all 0.7s ease-in-out;
-  -moz-transition: all 0.7s ease-in-out;
-  -o-transition: all 0.7s ease-in-out;
-  transform: none;
+}
+.container .box1:hover {
+  border: 0.3rem ridge gold;
+  color: #ffde23;
   cursor: pointer;
+  transform: translatey(-20px);
 }
-.container header {
-  /* border: 1px dotted blue; */
+.container .box1 h2 {
   display: flex;
   justify-content: center;
-  align-items: baseline;
-}
-.container .middle-section {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 10px 10px 10px;
-  margin-right: -250px;
-  margin-left: 320px;
-  font-family: 'Chicle', cursive;
-}
-.container .bottom-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Chicle', cursive;
-}
-.container span {
-  display: flex;
-  justify-content: center;
-  padding: 20px 20px 20px 20px;
-}
-.container .contact {
-  display: flex;
-  justify-content: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 1.7rem;
 }
 .container p {
-  border-bottom: 1px dashed grey;
+  font-family: 'Gugi', cursive;
+  padding: 1.5rem;
+  font-size: 1rem;
 }
-.container h2 {
-  font-size: 18px;
-  font-family: 'Chicle', cursive;
-  padding: 10px 10px 10px 10px;
+.container address {
+  padding: 1.5rem;
 }
-@media screen and (max-width: 500px) {
+.container .box2 {
+  background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% 100%;
+  background-attachment: fixed;
+  width: 50vh;
+  height: 50vh;
+  margin: 1.2rem;
+  box-sizing: border-box;
+  transition: all 0.7s ease-in-out;
+  height: auto;
+  color: azure;
+}
+.container .box2:hover {
+  border: 0.3rem ridge gold;
+  color: #ffde23;
+  cursor: pointer;
+  transform: translatey(20px);
+}
+.container .box2 h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 1.7rem;
+}
+.container p {
+  font-family: 'Gugi', cursive;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+.container .box3 {
+  background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% 100%;
+  background-attachment: fixed;
+  width: 50vh;
+  height: 50vh;
+  margin: 1.2rem;
+  box-sizing: border-box;
+  transition: all 0.7s ease-in-out;
+  height: auto;
+  color: azure;
+}
+.container .box3:hover {
+  border: 0.3rem ridge gold;
+  color: #ffde23;
+  cursor: pointer;
+  transform: translatey(-20px);
+}
+.container .box3 h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 1.7rem;
+}
+.container p {
+  font-family: 'Gugi', cursive;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+.container .box4 {
+  background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% 100%;
+  background-attachment: fixed;
+  width: 50vh;
+  height: 50vh;
+  margin: 1.2rem;
+  box-sizing: border-box;
+  transition: all 0.7s ease-in-out;
+  height: auto;
+  color: azure;
+}
+.container .box4:hover {
+  border: 0.3rem ridge gold;
+  color: #ffde23;
+  cursor: pointer;
+  transform: translatey(20px);
+}
+.container .box4 h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 1.7rem;
+}
+.container p {
+  font-family: 'Gugi', cursive;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+.container .box5 {
+  background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% 100%;
+  background-attachment: fixed;
+  width: 50vh;
+  height: 50vh;
+  margin: 1.2rem;
+  box-sizing: border-box;
+  transition: all 0.7s ease-in-out;
+  height: auto;
+  color: azure;
+}
+.container .box5:hover {
+  border: 0.3rem ridge gold;
+  color: #ffde23;
+  cursor: pointer;
+  transform: translatey(-20px);
+}
+.container .box5 h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 1.7rem;
+}
+.container .box5 h2 a {
+  text-decoration: none;
+  color: azure;
+}
+.container p {
+  font-family: 'Gugi', cursive;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+.container .box6 {
+  background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% 100%;
+  background-attachment: fixed;
+  width: 50vh;
+  height: 50vh;
+  margin: 1.2rem;
+  box-sizing: border-box;
+  transition: all 0.7s ease-in-out;
+  height: auto;
+  color: azure;
+}
+.container .box6:hover {
+  border: 0.3rem ridge gold;
+  color: #ffde23;
+  cursor: pointer;
+  transform: translatey(20px);
+}
+.container .box6 h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 1.7rem;
+}
+.container p {
+  font-family: 'Gugi', cursive;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+@media screen and (max-width: 799px) {
   .container {
-    display: flex;
-    justify-content: flex-start;
+    width: 100%;
   }
 }

@@ -52,127 +52,353 @@ table {
 * {
     box-sizing: border-box;
 }
-/* variables---*/
+/* variables and mixins---*/
+@fontsize: 1.7rem;
+@transition: all .7s ease-in-out;
 
-@font-size-h2: 18px;
-@font-style: 'Chicle', cursive;
-@display: flex;
-/* mixins---*/
-.borders{
-	border-bottom: 1px dashed grey;
+.hovering(){
 	
-}
-.paddings{
-	padding:10px 10px 10px 10px; 
-}
-
-html, body {
-	height: 100%;
-}
-.container{
-	/* border: 1px solid red; */
-	height: 100%;
-	margin: 0px;
-	padding :0px;
-	box-sizing: content-box;
- 
-#my-name{
-	display: @display;
-	justify-content: center;
-	align-items: center;
-	margin-top: 50px;
-	margin-right: -70px;
-	margin-bottom: -60px;
-	font-family: 'Bangers', cursive;
-	font-size: 23px;
-	font-weight: bold;
-	padding: 5px 5px 5px 5px; 
-}
-
-.logo{
-	width: 90px;
-	margin-right: 0px; 
-	margin-left: -80px;
-	.paddings();
 	
-}
-
-nav a {
-	display: @display;
-	justify-content: space-evenly;
-	text-decoration: none;
-	padding: 20px 20px 20px 20px;
-	color: black;
-	font-family: @font-style;
-	transition: all 0.7s ease-in-out;
-	-webkit-transition: all 0.7s ease-in-out;
-	-moz-transition: all 0.7s ease-in-out;
-	-o-transition: all 0.7s ease-in-out;
-	transform: none;
+	border: .3rem ridge gold;
+	color: rgb(255, 222, 35);
 	cursor: pointer;
+}
 
+
+
+
+
+body{
+	font-size: 62.5%;
+	background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+	background-repeat: repeat, no-repeat;
+	background-size: auto, 100% 100%;
+	background-attachment: fixed;
+	overflow-y: scroll;
 
 }
- 
+header{
+	h1{
+		text-align: center;
+		font-family: 'Anton', sans-serif;
+		font-size: 2.5rem;
+		color: gold; 
+	}
+	nav{
+		text-align: center;
+		font-size: 1.2rem;
+		margin: 1rem;
+		a{
+			text-decoration: none;
+			margin: 1rem;
+			font-family: 'Akronim', cursive;
+			color: gold;
+			transition: @transition;
+			&:hover{
+				border: .5rem dotted orangered;
+				font-size: 1.5rem;
+			}
+		}
+	}
 
-header {
-	/* border: 1px dotted blue; */
-	display: @display;
-	justify-content: center;
-	align-items: baseline;
 }
-.middle-section{
-	display: @display;
-	width: 50%;
+
+.container{
+	 
+	width: 80rem;
+	display: flex;
+	//grid-template-columns: repeat(3, 1fr);
+	//grid-template-rows: repeat(4, 1fr);
 	flex-direction: column;
+	flex-flow: wrap;
 	justify-content: center;
-	align-items: center;
-	.paddings();
-	margin-right: -250px;
-	margin-left: 320px;
-	font-family: @font-style;
-
-}
-.bottom-section{
-	display:@display;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: @font-style;
 	
-}
-span{
-	display: @display;
-	justify-content: center;
-	padding:20px 20px 20px 20px;
 	
-}
-.contact{
-	display: @display;
-	justify-content: center;
-
-}
-p{
-	.borders();
-}
-h2{
-	font-size: @font-size-h2;
-	font-family: @font-style;
-	.paddings()
-}
-
-
-}
-@media screen and (max-width: 500px) {
 	
+	
+	
+	
+	
+
+	.box1{
+		background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+		background-repeat: repeat, no-repeat;
+		background-size: auto, 100% 100%;
+		background-attachment: fixed;
+		
+	
+	width: 50vh;
+	height: 50vh;
+	//grid-column:2/4;
+	//grid-row: 2/5
+	margin: 1.2rem;
+	box-sizing: border-box;
+	transition: @transition;
+	height: auto;
+	color: azure;
+	transition: @transition;
+	&:hover{
+		.hovering();
+		transform: translatey(-20px);
+	}
+	
+	
+	
+	
+	h2{
+		display: flex;
+		justify-content: center;
+		margin-top: 1.5rem;
+		padding-top: 1.5rem;
+		font-size: @fontsize;
+	}
+	
+	
+	}
+	p{
+	   font-family: 'Gugi', cursive;
+	   padding: 1.5rem;
+	   font-size: 1rem;
+	   
+	   
+	}
+	address{
+		padding: 1.5rem;
+	}
+
+
+	.box2{
+		background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+	background-repeat: repeat, no-repeat;
+	background-size: auto, 100% 100%;
+	background-attachment: fixed;
+	
+		
+		width: 50vh;
+		height: 50vh;
+		//grid-column:2/4;
+		//grid-row: 2/5
+		margin: 1.2rem;
+		box-sizing: border-box;
+		transition: @transition;
+		height: auto;
+		color: azure;
+		&:hover{
+			.hovering();
+			transform: translatey(20px);
+		}
+		
+		
+		
+		
+		
+		h2{
+			display: flex;
+			justify-content: center;
+			margin-top: 1.5rem;
+			padding-top: 1.5rem;
+			font-size: @fontsize;
+		}
+		
+		
+		}
+		p{
+		   font-family: 'Gugi', cursive;
+		   padding: 1.5rem;
+		   font-size: 1rem;
+		   
+		   
+		}
+
+		.box3{
+			background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+	background-repeat: repeat, no-repeat;
+	background-size: auto, 100% 100%;
+	background-attachment: fixed;
+	
+			
+			width: 50vh;
+			height: 50vh;
+			//grid-column:2/4;
+			//grid-row: 2/5
+			margin: 1.2rem;
+			box-sizing: border-box;
+			transition: @transition;
+			height: auto;
+			color: azure;
+			&:hover{
+				.hovering();
+				transform: translatey(-20px);
+			}
+
+			
+			
+			
+			
+			h2{
+				display: flex;
+				justify-content: center;
+				margin-top: 1.5rem;
+				padding-top: 1.5rem;
+				font-size: @fontsize;
+			}
+			
+			
+			}
+			p{
+			   font-family: 'Gugi', cursive;
+			   padding: 1.5rem;
+			   font-size: 1rem;
+			   
+			   
+			}
+
+			.box4{
+				background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+	background-repeat: repeat, no-repeat;
+	background-size: auto, 100% 100%;
+	background-attachment: fixed;
+	
+				
+				width: 50vh;
+				height: 50vh;
+				//grid-column:2/4;
+				//grid-row: 2/5
+				margin: 1.2rem;
+				box-sizing: border-box;
+				transition: @transition;
+				height: auto;
+				color: azure;
+				&:hover{
+					.hovering();
+					transform: translatey(20px);
+				}
+				
+				
+				
+				
+				h2{
+					display: flex;
+					justify-content: center;
+					margin-top: 1.5rem;
+					padding-top: 1.5rem;
+					font-size: @fontsize;
+				}
+				
+				
+				}
+				p{
+				   font-family: 'Gugi', cursive;
+				   padding: 1.5rem;
+				   font-size: 1rem;
+				   
+				   
+				}
+
+				.box5{
+					background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+	background-repeat: repeat, no-repeat;
+	background-size: auto, 100% 100%;
+	background-attachment: fixed;
+	
+					
+					width: 50vh;
+					height: 50vh;
+					//grid-column:2/4;
+					//grid-row: 2/5
+					margin: 1.2rem;
+					box-sizing: border-box;
+					transition: @transition;
+					height: auto;
+					color: azure;
+					&:hover{
+						.hovering();
+						transform: translatey(-20px);
+					}
+					
+					
+					
+					
+					
+					h2{
+						display: flex;
+						justify-content: center;
+						margin-top: 1.5rem;
+						padding-top: 1.5rem;
+						font-size: @fontsize;
+						a{
+							text-decoration: none;
+							color: azure;
+						}
+					}
+					
+					
+					}
+					p{
+					   font-family: 'Gugi', cursive;
+					   padding: 1.5rem;
+					   font-size: 1rem;
+					   
+					   
+					}
+
+					.box6{
+						background-image: url(/less/images/overlay.png), url(/less/images/access-close-up-code-1.jpg);
+	background-repeat: repeat, no-repeat;
+	background-size: auto, 100% 100%;
+	background-attachment: fixed;
+	
+						
+						width: 50vh;
+						height: 50vh;
+						//grid-column:2/4;
+						//grid-row: 2/5
+						margin: 1.2rem;
+						box-sizing: border-box;
+						transition: @transition;
+						height: auto;
+						color: azure;
+						&:hover{
+							.hovering();
+							transform: translatey(20px);
+						}
+						
+						
+						
+						
+						h2{
+							display: flex;
+							justify-content: center;
+							margin-top: 1.5rem;
+							padding-top: 1.5rem;
+							font-size: @fontsize;
+						}
+						
+						
+						}
+						p{
+						   font-family: 'Gugi', cursive;
+						   padding: 1.5rem;
+						   font-size: 1rem;
+						   
+						   
+						}
+        
+
+}
+
+// beginning of media queries
+@media screen and (max-width: 799px){
 	.container{
-
-	display: @display;
-	justify-content: flex-start;
-	
+width: 100%;
 
 	}
 }
+
+
+
+
+
 
 
 
